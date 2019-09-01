@@ -30,7 +30,6 @@ def generate_dataset(job_title, location, review_date, review_text):
 def get_reviews(url, count_reviews):
     for i in range(0,count_reviews+20,20):
         formatted_url = url + "&start=" + str(i)
-        print(formatted_url)
         req = requests.get(formatted_url)
         if (req.status_code == 200):
             content = req.content
